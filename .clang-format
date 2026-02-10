@@ -1,0 +1,88 @@
+# Options document : https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# Useful tool for config : https://www.clangpowertools.com/clang-format-editor.html
+
+BasedOnStyle: Google
+
+Language: Cpp
+
+AlignAfterOpenBracket: false
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments: true
+AlignConsecutiveBitFields: AcrossEmptyLines
+AlignConsecutiveDeclarations :
+  Enabled : false
+  AcrossEmptyLines : false
+  AcrossComments: false
+AlignConsecutiveMacros : AcrossEmptyLines
+AlignEscapedNewlines : Left
+AlignOperands: Align
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine : Never
+AllowShortCaseLabelsOnASingleLine : false
+AllowShortEnumsOnASingleLine : false
+AllowShortFunctionsOnASingleLine : Empty
+AllowShortIfStatementsOnASingleLine  : Never
+AllowShortLambdasOnASingleLine : None
+AllowShortLoopsOnASingleLine : true
+AlwaysBreakBeforeMultilineStrings : false
+BinPackArguments : true
+BinPackParameters : true
+BitFieldColonSpacing : Both
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterFunction: true
+  AfterStruct: false
+  AfterUnion: false
+  AfterEnum: false
+  AfterControlStatement: Never
+  BeforeElse: false
+BreakArrays: true
+BreakBeforeBinaryOperators : None
+BreakBeforeBraces: Custom
+BreakBeforeTernaryOperators : true
+BreakStringLiterals  : false
+ColumnLimit : 200
+ContinuationIndentWidth : 4
+DerivePointerAlignment : false
+IncludeBlocks : Preserve
+IndentCaseBlocks : false
+IndentCaseLabels : false
+IndentPPDirectives : None 
+IndentWidth : 4
+InsertBraces : true
+InsertNewlineAtEOF : false
+KeepEmptyLinesAtTheStartOfBlocks : false
+LineEnding : CRLF
+MaxEmptyLinesToKeep : 1
+PointerAlignment : Right
+QualifierAlignment : Leave
+ReferenceAlignment : Right
+ReflowComments : false
+SpaceAfterCStyleCast : false
+SpaceAfterLogicalNot : false
+SpaceBeforeAssignmentOperators : true
+SpaceBeforeCaseColon : false
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterFunctionDeclarationName : false
+  AfterFunctionDefinitionName: false
+  BeforeNonEmptyParentheses : false
+SpaceBeforeRangeBasedForLoopColon : true
+SpaceBeforeSquareBrackets : false
+SpaceInEmptyBlock : false
+SpaceInEmptyParentheses : false
+SpacesBeforeTrailingComments : 1
+SpacesInAngles : Never
+SpacesInLineCommentPrefix :
+  Minimum : 1
+  Maximum : -1
+SpacesInParentheses : false
+SpacesInSquareBrackets : false
+Standard : Auto
+TabWidth : 4
+UseTab : Never

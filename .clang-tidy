@@ -1,0 +1,103 @@
+Checks: >
+    performance-*,
+    misc-*,
+    readability-suspicious-call-argument,
+    readability-simplify-boolean-expr,
+    readability-redundant-declaration,
+    readability-redundant-control-flow,
+    readability-non-const-parameter,
+    readability-misleading-indentation,
+    readability-implicit-bool-conversion,
+    readability-identifier-naming,
+    readability-inconsistent-declaration-parameter-name,
+    readability-function-size,
+    readability-else-after-return,
+    readability-duplicate-include,
+    readability-avoid-nested-conditional-operator,
+    bugprone-assert-side-effect,
+    bugprone-assignment-in-if-condition,
+    bugprone-bool-pointer-implicit-conversion,
+    bugprone-branch-clone,
+    bugprone-chained-comparison,
+    bugprone-implicit-widening-of-multiplication-result,
+    bugprone-inc-dec-in-conditions,
+    bugprone-incorrect-roundings,
+    bugprone-infinite-loop,
+    bugprone-integer-division,
+    bugprone-macro-parentheses,
+    bugprone-macro-repeated-side-effects,
+    bugprone-misplaced-operator-in-strlen-in-alloc,
+    bugprone-misplaced-pointer-arithmetic-in-alloc,
+    bugprone-misplaced-widening-cast,
+    bugprone-multi-level-implicit-pointer-conversion,
+    bugprone-multiple-statement-macro,
+    bugprone-non-zero-enum-to-bool-conversion,
+    bugprone-not-null-terminated-result,
+    bugprone-posix-return,
+    bugprone-redundant-branch-condition,
+    bugprone-reserved-identifier,
+    bugprone-signed-char-misuse,
+    bugprone-sizeof-expression,
+    bugprone-string-literal-with-embedded-nul,
+    bugprone-suspicious-enum-usage,
+    bugprone-suspicious-include,
+    bugprone-suspicious-memory-comparison,
+    bugprone-suspicious-memset-usage,
+    bugprone-suspicious-missing-comma,
+    bugprone-suspicious-realloc-usage,
+    bugprone-suspicious-semicolon,
+    bugprone-suspicious-string-compare,
+    bugprone-swapped-arguments,
+    bugprone-switch-missing-default-case,
+    bugprone-too-small-loop-variable,
+    bugprone-unused-return-value,
+    bugprone-signal-handler,
+    -clang-analyzer-security.insecureAPI.*,
+    clang-analyzer-core.ReturnValue,
+    clang-analyzer-core.UndefinedBinaryOperatorResult,
+    -misc-no-recursion,
+    -performance-no-int-to-ptr,
+    clang-analyzer-core.BitwiseShift,
+    clang-analyzer-core.CallAndMessage,
+    clang-analyzer-core.DivideZero,
+    clang-analyzer-core.FixedAddressDereference,
+    clang-analyzer-core.NonNullParamChecker,
+    clang-analyzer-core.NullDereference,
+    clang-analyzer-core.NullPointerArithm,
+    clang-analyzer-core.StackAddressEscape,
+    clang-analyzer-core.UndefinedBinaryOperatorResult,
+    clang-analyzer-core.VLASize,
+    clang-analyzer-core.uninitialized.ArraySubscript,
+    clang-analyzer-core.uninitialized.Assign,
+    clang-analyzer-core.uninitialized.Branch,
+    clang-analyzer-core.uninitialized.CapturedBlockVariable,
+    clang-analyzer-core.uninitialized.UndefReturn,
+#    readability-magic-numbers,
+#    readability-math-missing-parentheses,
+#    readability-function-cognitive-complexity,
+# treat all warnings as errors
+WarningsAsErrors: '*'
+
+# HeaderFilter: '.*'
+
+CheckOptions:
+  - key:    readability-identifier-naming.ConstantCase
+    value:  lower_case
+  - key:    readability-identifier-naming.EnumCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.EnumConstantCase
+    value:  UPPER_CASE
+  - key:    readability-identifier-naming.FunctionCase
+    value:  '(UPPER_CASE|lower_case)'
+  - key:    readability-identifier-naming.MacroDefinitionCase
+    value:  '(UPPER_CASE|lower_case)'
+  - key:    readability-identifier-naming.MemberCase
+    value:  '(UPPER_CASE|lower_case)'
+  - key:    readability-identifier-naming.StructCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.TypedefCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.VariableCase
+    value:  '(UPPER_CASE|lower_case)'
+
+ExtraArgs: [-std=c11,-DDEBUG]
