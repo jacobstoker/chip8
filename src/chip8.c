@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FILENAME            "../test/IBM Logo.ch8"
+#define FILENAME            "../test/SCTEST"
 
 #define UNUSED(x)           (void)(x)
 #define ARRAY_SIZE(arr)     (sizeof((arr)) / sizeof((arr)[0]))
@@ -111,8 +111,7 @@ uint16_t stack_ptr;
 uint16_t PC;
 uint8_t *RAM;
 
-uint8_t framebuffer[32][64];
-bool screen_needs_update = false;
+uint8_t framebuffer[HEIGHT][WIDTH];
 
 #pragma endregion
 #pragma region opcodes
@@ -432,8 +431,6 @@ void op_drw(uint16_t opcode)
             framebuffer[py][px] ^= 1;
         }
     }
-
-    screen_needs_update = true;
 }
 
 // Ex9E - SKP Vx
@@ -635,6 +632,7 @@ void op_Exxx_handler(uint16_t opcode)
         op_sknp(opcode);
         break;
     default:
+        printf("Unknown opcode 0x%04x\n", opcode);
         assert(false);
     }
 }
@@ -680,6 +678,7 @@ void op_Fxxx_handler(uint16_t opcode)
         break;
 
     default:
+        printf("Unknown opcode 0x%04x\n", opcode);
         assert(false);
     }
 }
